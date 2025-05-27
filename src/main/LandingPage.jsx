@@ -27,7 +27,7 @@ export default function LandingPage() {
         </nav>
         <button className="theme-toggle"onClick={() => setDarkMode(!darkMode)}>
             {darkMode ? '☀️' : '🌙'}
-            </button>
+        </button>
       </header>
 
       <main className="main-content">
@@ -36,6 +36,11 @@ export default function LandingPage() {
           <p>Questa è una semplice landing page</p>
         </div>
       </main>
+
+      
+      <footer className="footer">
+        <p>© {new Date().getFullYear()} My App. Tutti i diritti riservati.</p>
+      </footer>
     </div>
   );
 }
