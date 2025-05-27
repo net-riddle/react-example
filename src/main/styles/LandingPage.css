@@ -65,7 +65,7 @@
 }
 
 .container.dark .nav-links li:hover {
-  color: #16ca3d;
+  color: #1e00c7;
 }
 
 .theme-toggle {
@@ -75,7 +75,7 @@
   background-color: #111;
   color: white;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   transition: background-color 0.3s;
   flex-shrink: 0; 
 }

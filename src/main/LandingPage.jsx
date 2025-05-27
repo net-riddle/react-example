@@ -26,7 +26,7 @@ export default function LandingPage() {
             
         </nav>
         <button className="theme-toggle"onClick={() => setDarkMode(!darkMode)}>
-            {darkMode ? '🌞' : '🌙'}
+            {darkMode ? '☀️' : '🌙'}
             </button>
       </header>
 
