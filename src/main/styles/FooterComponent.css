@@ -1,0 +1,14 @@
+.footer {
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: #111;
+  color: #bbb9b9;
+  font-size: 0.9rem;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.container.dark .footer {
+  background-color: #252525;
+  color: #d3d3d3;
+}

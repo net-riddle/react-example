@@ -1,0 +1,81 @@
+.header {
+  height: 80px;
+  background-color: #111;
+  transition: background-color 0.3s, color 0.3s;
+  color: #bbb9b9;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.container.dark .header {
+  background-color: #252525;
+  color: #d3d3d3;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.navbar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-links li:hover {
+  color: #16ca3d;
+}
+
+.container.dark .nav-links li:hover {
+  color: #1e00c7;
+}
+
+.theme-toggle {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #111;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background-color 0.3s;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  background-color: #5c5c5c;
+}
+
+.container.dark .theme-toggle {
+  background-color: #252525;
+  color: #000;
+}
+
+.container.dark .theme-toggle:hover {
+  background-color: #5c5c5c;
+}

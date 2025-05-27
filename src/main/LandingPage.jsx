@@ -1,34 +1,14 @@
-import React, { useState } from 'react';
+import { useTheme } from './contexts/ThemeContext';
 import './styles/LandingPage.css';
-import { useNavigate } from 'react-router-dom';
+import Navbar from './components/NavbarComponent';
+import Footer from './components/FooterComponent';
 
-export default function LandingPage() {
-  const [darkMode, setDarkMode] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); 
-  const navigate = useNavigate();
-
-  const handleNavigate = (path) => {
-    navigate(path);
-  };
-
+export default function LandingPage({ isLoggedIn }) {
+  const { darkMode } = useTheme();
 
   return (
     <div className={darkMode ? 'container dark' : 'container'}>
-      <header className="header">
-        <h1 className="logo">Example App</h1>
-        <nav className="navbar">
-            <ul className="nav-links">
-                <li onClick={() => handleNavigate('/')}>Home</li>
-                <li onClick={() => handleNavigate(isLoggedIn ? '/profilo' : '/login')}>
-                    {isLoggedIn ? 'Profilo' : 'Login'}
-                </li>
-            </ul>
-            
-        </nav>
-        <button className="theme-toggle"onClick={() => setDarkMode(!darkMode)}>
-            {darkMode ? '☀️' : '🌙'}
-        </button>
-      </header>
+      <Navbar isLoggedIn={isLoggedIn} />  
 
       <main className="main-content">
         <div className="message-box">
@@ -37,10 +17,7 @@ export default function LandingPage() {
         </div>
       </main>
 
-      
-      <footer className="footer">
-        <p>© {new Date().getFullYear()} My App. Tutti i diritti riservati.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
